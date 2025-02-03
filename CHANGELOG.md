@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/lawnstarter/react-native-ui-datepicker/compare/1.0.0...1.1.0) (2025-02-03)
+
+
+### Features
+
+* **Vite:** Adjust project to build with vite ([5725d22](https://github.com/lawnstarter/react-native-ui-datepicker/commit/5725d2211d25304567256d6922796179e19859c2))
+
 # 1.0.0 (2025-02-03)
 
 
