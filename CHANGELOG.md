@@ -1,3 +1,12 @@
+# [1.6.0](https://github.com/lawnstarter/react-native-ui-datepicker/compare/1.5.0...1.6.0) (2025-02-03)
+
+
+### Features
+
+* **Vite:** Enhance vite build config ([27ba692](https://github.com/lawnstarter/react-native-ui-datepicker/commit/27ba692687c0d6a15254e03f7bc6defa512afbac))
+* **Vite:** Enhance vite build config ([732524e](https://github.com/lawnstarter/react-native-ui-datepicker/commit/732524e0170d721e19a33dff9ae8af4f785a592f))
+* **Vite:** Enhance vite build config ([f817eb7](https://github.com/lawnstarter/react-native-ui-datepicker/commit/f817eb7ebacb0d711479849132476e56ca8e18df))
+
 # [1.5.0](https://github.com/lawnstarter/react-native-ui-datepicker/compare/1.4.0...1.5.0) (2025-02-03)
 
 
