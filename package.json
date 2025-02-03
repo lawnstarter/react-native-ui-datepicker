@@ -129,6 +129,7 @@
       [
         "@semantic-release/git",
         {
+          "branches": ["main"],
           "assets": [
             "CHANGELOG.md",
             "package.json",
