@@ -54,7 +54,7 @@ jobs:
           GH_TOKEN: ${{ env.GH_TOKEN }}
 
       - name: Build package
-        run: yarn prepack
+        run: yarn build
 
       - name: Create release
         run: npx semantic-release
