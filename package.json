@@ -54,35 +54,35 @@
       "types": "./dist/index.d.ts"
     },
     "./types": {
-      "types": "./dist/react-native-ui-datepicker/src/types.d.ts",
-      "require": "./dist/react-native-ui-datepicker/types.cjs",
-      "import": "./dist/react-native-ui-datepicker/types.js",
-      "react-native": "./dist/react-native-ui-datepicker/types.js"
+      "types": "./dist/src/types.d.ts",
+      "require": "./dist/types.cjs",
+      "import": "./dist/types.js",
+      "react-native": "./dist/types.js"
     },
     "./enums": {
-      "types": "./dist/react-native-ui-datepicker/src/enums.d.ts",
-      "require": "./dist/react-native-ui-datepicker/enums.cjs",
-      "import": "./dist/react-native-ui-datepicker/enums.js",
-      "react-native": "./dist/react-native-ui-datepicker/enums.js"
+      "types": "./dist/src/enums.d.ts",
+      "require": "./dist/enums.cjs",
+      "import": "./dist/enums.js",
+      "react-native": "./dist/enums.js"
     },
     "./utils": {
-      "types": "./dist/react-native-ui-datepicker/src/utils.d.ts",
-      "require": "./dist/react-native-ui-datepicker/utils.cjs",
-      "import": "./dist/react-native-ui-datepicker/utils.js",
-      "react-native": "./dist/react-native-ui-datepicker/utils.js"
+      "types": "./dist/src/utils.d.ts",
+      "require": "./dist/utils.cjs",
+      "import": "./dist/utils.js",
+      "react-native": "./dist/utils.js"
     },
     "./assets/*": "./dist/assets/*"
   },
   "typesVersions": {
     "*": {
       "types": [
-        "./dist/react-native-ui-datepicker/src/types.d.ts"
+        "./dist/src/types.d.ts"
       ],
       "enums": [
-        "./dist/react-native-ui-datepicker/src/enums.d.ts"
+        "./dist/src/enums.d.ts"
       ],
       "utils": [
-        "./dist/react-native-ui-datepicker/src/utils.d.ts"
+        "./dist/src/utils.d.ts"
       ]
     }
   },
@@ -121,6 +121,7 @@
     "ts-node": "^10.9.1",
     "typescript": "^4.5.2",
     "vite": "^4.5.9",
+    "vite-plugin-dts": "^3.6.4",
     "vite-plugin-static-copy": "^2.2.0"
   },
   "resolutions": {
@@ -151,20 +152,14 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
-      [
-        "@semantic-release/npm",
-        {
-          "pkgRoot": "dist"
-        }
-      ],
+      "@semantic-release/npm",
       [
         "@semantic-release/git",
         {
           "assets": [
             "CHANGELOG.md",
             "package.json",
-            "package-lock.json",
-            "dist/**/*.{js,cjs,mjs,png}"
+            "package-lock.json"
           ],
           "message": "build(release): v${nextRelease.version} [release]"
         }

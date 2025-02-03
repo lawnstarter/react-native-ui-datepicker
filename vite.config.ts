@@ -1,20 +1,15 @@
 import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
+import dts from 'vite-plugin-dts';
 
 import { extensions } from './vite.build.helpers';
 
 export default defineConfig({
   plugins: [
     react(),
-    viteStaticCopy({
-      targets: [
-        { src: './src/assets', dest: './' },
-        { src: './package.json', dest: './' },
-        { src: './README.md', dest: './' },
-        { src: './CHANGELOG.md', dest: './' },
-      ],
-    }),
+    dts({ exclude: ['**/*.test.ts', '**/*.test.tsx'] }),
+    viteStaticCopy({ targets: [{ src: './src/assets', dest: './' }] }),
   ],
   build: {
     outDir: 'dist',
