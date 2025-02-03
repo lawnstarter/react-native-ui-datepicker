@@ -4,7 +4,8 @@ import { useCalendarContext } from '../../CalendarContext';
 import { YEAR_PAGE_SIZE } from '../../utils';
 import { CalendarThemeProps } from '../../types';
 
-const arrow_left = require('../../assets/images/arrow_left.png');
+// @ts-ignore: Ignoring since file exists
+import arrow_left from '../../assets/images/arrow_left.png';
 
 type PrevButtonProps = {
   icon?: React.ReactNode;

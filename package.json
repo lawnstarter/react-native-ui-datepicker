@@ -57,13 +57,13 @@
     "calendar",
     "daterange"
   ],
-  "repository": "https://github.com/farhoudshapouran/react-native-ui-datepicker",
+  "repository": "https://github.com/lawnstarter/react-native-ui-datepicker",
   "author": "Farhoud Shapouran <shapouran@gmail.com> (https://github.com/farhoudshapouran)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/farhoudshapouran/react-native-ui-datepicker/issues"
+    "url": "https://github.com/lawnstarter/react-native-ui-datepicker/issues"
   },
-  "homepage": "https://github.com/farhoudshapouran/react-native-ui-datepicker#readme",
+  "homepage": "https://github.com/lawnstarter/react-native-ui-datepicker#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

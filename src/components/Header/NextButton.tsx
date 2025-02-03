@@ -3,7 +3,8 @@ import { View, Image, Pressable, StyleSheet } from 'react-native';
 import { useCalendarContext } from '../../CalendarContext';
 import { YEAR_PAGE_SIZE } from '../../utils';
 
-const arrow_right = require('../../assets/images/arrow_right.png');
+// @ts-ignore: Ignoring since file exists
+import arrow_right from '../../assets/images/arrow_right.png';
 
 type NextButtonProps = {
   icon?: React.ReactNode;

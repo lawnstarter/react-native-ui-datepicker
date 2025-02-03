@@ -40,12 +40,6 @@ const Calendar = ({ buttonPrevIcon, buttonNextIcon, height }: PropTypes) => {
 
   return (
     <View style={styles.container} testID="calendar">
-      {/* {mode !== 'time' ? (
-        <Header
-          buttonPrevIcon={buttonPrevIcon}
-          buttonNextIcon={buttonNextIcon}
-        />
-      ) : null} */}
       <Header
         buttonPrevIcon={buttonPrevIcon}
         buttonNextIcon={buttonNextIcon}

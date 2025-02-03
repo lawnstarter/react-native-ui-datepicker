@@ -61,7 +61,7 @@ const WheelWeb = ({ value, setValue = () => {}, items, theme }: WheelProps) => {
           translateY.setOffset(0);
           translateY.setValue(0);
         } else {
-          setValue(parseInt(newValue));
+          setValue(parseInt(newValue, 10));
         }
       },
     });

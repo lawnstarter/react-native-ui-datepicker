@@ -80,19 +80,19 @@ export function isDateDisabled(
   if (minDate && date < getDate(minDate)) {
     return true;
   }
+
   if (maxDate && date > getDate(maxDate)) {
     return true;
   }
 
   if (disabledDates) {
     if (Array.isArray(disabledDates)) {
-      const isDisabled = disabledDates.some((disabledDate) =>
+      return disabledDates.some((disabledDate) =>
         areDatesOnSameDay(date, disabledDate)
       );
-      return isDisabled;
-    } else if (disabledDates instanceof Function) {
-      return disabledDates(date);
     }
+
+    return disabledDates(date);
   }
 
   return false;

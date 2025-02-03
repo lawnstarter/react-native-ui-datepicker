@@ -1,10 +1,10 @@
 import React, { useCallback } from 'react';
 import {
-  Text,
-  View,
   Pressable,
   StyleSheet,
+  Text,
   TextStyle,
+  View,
   ViewStyle,
 } from 'react-native';
 import { useCalendarContext } from '../CalendarContext';
@@ -18,7 +18,7 @@ const YearSelector = () => {
   const generateCells = useCallback(() => {
     const years = getYearRange(currentYear);
     const activeYear = getDateYear(currentDate);
-    const column = years.map((year) => {
+    return years.map((year) => {
       const activeItemStyle: ViewStyle =
         year === selectedYear
           ? {
@@ -59,7 +59,6 @@ const YearSelector = () => {
         </Pressable>
       );
     });
-    return column;
   }, [onSelectYear, selectedYear, currentYear, currentDate, theme]);
 
   return (

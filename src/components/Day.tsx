@@ -94,6 +94,7 @@ function Day({
             <View
               style={[
                 style.rangeRoot,
+                // eslint-disable-next-line react-native/no-inline-styles
                 { left: '50%', backgroundColor: rangeBackground },
               ]}
             />
@@ -102,6 +103,7 @@ function Day({
             <View
               style={[
                 style.rangeRoot,
+                // eslint-disable-next-line react-native/no-inline-styles
                 { right: '50%', backgroundColor: rangeBackground },
               ]}
             />
