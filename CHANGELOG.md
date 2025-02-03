@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/lawnstarter/react-native-ui-datepicker/compare/1.7.0...1.7.1) (2025-02-03)
+
+
+### Bug Fixes
+
+* **Vite:** Fix broken react-native dependence ([8464ce3](https://github.com/lawnstarter/react-native-ui-datepicker/commit/8464ce3bab0588e9c076b9eb9adba1fe2b18dea6))
+
 # [1.7.0](https://github.com/lawnstarter/react-native-ui-datepicker/compare/1.6.0...1.7.0) (2025-02-03)
 
 
