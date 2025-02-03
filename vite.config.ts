@@ -9,10 +9,17 @@ export default defineConfig({
   plugins: [
     react(),
     dts({ exclude: ['**/*.test.ts', '**/*.test.tsx'] }),
-    viteStaticCopy({ targets: [{ src: './src/assets', dest: './' }] }),
+    viteStaticCopy({
+      targets: [
+        { src: './src/assets', dest: '.' },
+        { src: './package.json', dest: '.' },
+        { src: './README.md', dest: '.' },
+        { src: './CHANGELOG.md', dest: '.' },
+      ],
+    }),
   ],
   build: {
-    outDir: 'dist',
+    outDir: 'dist/lib',
     sourcemap: true,
     emptyOutDir: true,
     lib: {

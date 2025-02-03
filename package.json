@@ -3,10 +3,10 @@
   "version": "1.6.0",
   "type": "module",
   "description": "Customizable date picker for React Native",
-  "types": "dist/index.d.ts",
-  "main": "./dist/react-native-ui-datepicker.cjs",
-  "module": "./dist/react-native-ui-datepicker.js",
-  "react-native": "./dist/react-native-ui-datepicker.js",
+  "types": "./lib/index.d.ts",
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.js",
+  "react-native": "./lib/rindex.js",
   "source": "src/index",
   "scripts": {
     "build": "vite build",
@@ -49,41 +49,35 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/react-native-ui-datepicker.js",
-      "require": "./dist/react-native-ui-datepicker.cjs",
-      "types": "./dist/index.d.ts"
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs",
+      "types": "./lib/index.d.ts"
     },
     "./types": {
-      "types": "./dist/src/types.d.ts",
-      "require": "./dist/types.cjs",
-      "import": "./dist/types.js",
-      "react-native": "./dist/types.js"
+      "types": "./lib/types.d.ts",
+      "require": "./lib/types.cjs",
+      "import": "./lib/types.js",
+      "react-native": "./lib/types.js"
     },
     "./enums": {
-      "types": "./dist/src/enums.d.ts",
-      "require": "./dist/enums.cjs",
-      "import": "./dist/enums.js",
-      "react-native": "./dist/enums.js"
+      "types": "./lib/enums.d.ts",
+      "require": "./lib/enums.cjs",
+      "import": "./lib/enums.js",
+      "react-native": "./lib/enums.js"
     },
     "./utils": {
-      "types": "./dist/src/utils.d.ts",
-      "require": "./dist/utils.cjs",
-      "import": "./dist/utils.js",
-      "react-native": "./dist/utils.js"
+      "types": "./lib/utils.d.ts",
+      "require": "./lib/utils.cjs",
+      "import": "./lib/utils.js",
+      "react-native": "./lib/utils.js"
     },
-    "./assets/*": "./dist/assets/*"
+    "./assets/*": "./lib/assets/*"
   },
   "typesVersions": {
     "*": {
-      "types": [
-        "./dist/src/types.d.ts"
-      ],
-      "enums": [
-        "./dist/src/enums.d.ts"
-      ],
-      "utils": [
-        "./dist/src/utils.d.ts"
-      ]
+      "types": ["./lib/types.d.ts"],
+      "enums": ["./lib/enums.d.ts"],
+      "utils": ["./lib/utils.d.ts"]
     }
   },
   "devDependencies": {
@@ -164,8 +158,7 @@
           "assets": [
             "CHANGELOG.md",
             "package.json",
-            "package-lock.json",
-            "dist/**/*.{js,cjs,mjs,png}"
+            "package-lock.json"
           ],
           "message": "build(release): v${nextRelease.version} [release]"
         }
