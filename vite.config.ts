@@ -44,10 +44,6 @@ export default defineConfig({
       jsx: 'automatic',
     },
   },
-  resolve: {
-    extensions: extensions,
-  },
-  esbuild: {
-    loader: 'tsx',
-  },
+  resolve: { extensions },
+  esbuild: { loader: 'tsx' },
 });

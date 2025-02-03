@@ -9,12 +9,11 @@
   "react-native": "./dist/react-native-ui-datepicker.js",
   "source": "src/index",
   "scripts": {
-    "cm": "git cz",
-    "test": "jest",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "build": "vite build",
-    "prepublish": "cp -r package.json ./dist"
+    "cm": "git cz",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
+    "test": "jest",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [
     "react-native",
