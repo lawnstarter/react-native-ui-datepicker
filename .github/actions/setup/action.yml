@@ -21,10 +21,6 @@ runs:
         node-version-file: .nvmrc
         scope: '@lawnstarter'
 
-    - name: Set registry authToken
-      shell: sh
-      run: echo "//npm.pkg.github.com/:_authToken=${{ inputs.GH_TOKEN }}" >> ./.npmrc;
-
     - name: Cache dependencies
       id: yarn-cache
       uses: actions/cache@v3

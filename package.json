@@ -27,13 +27,11 @@
     "!**/.*"
   ],
   "scripts": {
+    "cm": "git cz",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "prepack": "bob build",
-    "release": "release-it",
-    "example": "yarn --cwd example",
-    "bootstrap": "yarn example && yarn install"
+    "prepack": "bob build"
   },
   "keywords": [
     "react-native",
@@ -68,10 +66,13 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^17.0.2",
     "@evilmartians/lefthook": "^1.2.2",
     "@react-native-community/eslint-config": "^3.0.2",
-    "@release-it/conventional-changelog": "^5.0.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/release-notes-generator": "^12.1.0",
     "@testing-library/jest-native": "^5.4.3",
     "@testing-library/react-native": "^12.3.2",
     "@types/jest": "^29.5.14",
@@ -79,7 +80,9 @@
     "@types/react": "18.2.0",
     "@types/react-native": "0.72.0",
     "@types/react-test-renderer": "^18.0.0",
+    "commitizen": "^4.3.0",
     "commitlint": "^17.0.2",
+    "cz-ls-commits": "^1.1.0",
     "del-cli": "^5.0.0",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.5.0",
@@ -91,7 +94,7 @@
     "react-native": "0.72.0",
     "react-native-builder-bob": "^0.20.0",
     "react-test-renderer": "18.2.0",
-    "release-it": "^15.4.1",
+    "semantic-release": "^22.0.12",
     "ts-node": "^10.9.1",
     "typescript": "^4.5.2"
   },
@@ -107,27 +110,35 @@
   "engines": {
     "node": ">= 18"
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-ls-commits"
+    }
+  },
   "commitlint": {
     "extends": [
-      "@commitlint/config-conventional"
+      "./node_modules/cz-ls-commits/commitlint"
     ]
   },
-  "release-it": {
-    "git": {
-      "commitMessage": "chore: release ${version}",
-      "tagName": "v${version}"
-    },
-    "npm": {
-      "publish": true
-    },
-    "github": {
-      "release": true
-    },
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": "angular"
-      }
-    }
+  "release": {
+    "tagFormat": "${version}",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md",
+            "package.json",
+            "package-lock.json"
+          ],
+          "message": "build(release): v${nextRelease.version} [release]"
+        }
+      ],
+      "@semantic-release/github"
+    ]
   },
   "eslintConfig": {
     "root": true,
