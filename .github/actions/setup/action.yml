@@ -23,10 +23,7 @@ runs:
 
     - name: Set registry authToken
       shell: sh
-      run: |
-        npm set //npm.pkg.github.com/:_authToken ${{ inputs.GH_TOKEN }}
-        npm config set @lawnstarter:registry https://npm.pkg.github.com/
-        echo "//npm.pkg.github.com/:_authToken=${{ inputs.GH_TOKEN }}" >> ./.npmrc;
+      run: echo "//npm.pkg.github.com/:_authToken=${{ inputs.GH_TOKEN }}" >> ./.npmrc;
 
     - name: Cache dependencies
       id: yarn-cache

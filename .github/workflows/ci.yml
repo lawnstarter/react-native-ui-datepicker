@@ -59,4 +59,4 @@ jobs:
         run: yarn prepack
 
       - name: Create release
-        run: yarn release
+        run: npm run release
