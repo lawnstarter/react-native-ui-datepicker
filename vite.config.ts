@@ -11,10 +11,10 @@ export default defineConfig({
     dts({ exclude: ['**/*.test.ts', '**/*.test.tsx'] }),
     viteStaticCopy({
       targets: [
-        { src: './src/assets', dest: '.' },
-        { src: './package.json', dest: '.' },
-        { src: './README.md', dest: '.' },
-        { src: './CHANGELOG.md', dest: '.' },
+        { src: './src/assets', dest: './..' },
+        { src: './package.json', dest: './..' },
+        { src: './README.md', dest: './..' },
+        { src: './CHANGELOG.md', dest: './..' },
       ],
     }),
   ],
