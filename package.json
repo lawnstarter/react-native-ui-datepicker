@@ -1,12 +1,12 @@
 {
   "name": "@lawnstarter/react-native-ui-datepicker",
-  "version": "1.6.0",
+  "version": "2.0.10",
   "type": "module",
   "description": "Customizable date picker for React Native",
   "types": "./lib/index.d.ts",
   "main": "./lib/index.cjs",
   "module": "./lib/index.js",
-  "react-native": "./lib/rindex.js",
+  "react-native": "./lib/index.js",
   "source": "src/index",
   "scripts": {
     "build": "vite build",
