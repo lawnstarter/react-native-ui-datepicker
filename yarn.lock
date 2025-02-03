@@ -2569,6 +2569,7 @@ __metadata:
     "@semantic-release/commit-analyzer": "npm:^11.1.0"
     "@semantic-release/git": "npm:^10.0.1"
     "@semantic-release/github": "npm:^9.2.6"
+    "@semantic-release/npm": "npm:^11.0.2"
     "@semantic-release/release-notes-generator": "npm:^12.1.0"
     "@testing-library/jest-native": "npm:^5.4.3"
     "@testing-library/react-native": "npm:^12.3.2"
@@ -3389,7 +3390,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/npm@npm:^11.0.0":
+"@semantic-release/npm@npm:^11.0.0, @semantic-release/npm@npm:^11.0.2":
   version: 11.0.3
   resolution: "@semantic-release/npm@npm:11.0.3"
   dependencies:
