@@ -1,5 +1,5 @@
 {
-  "name": "react-native-ui-datepicker",
+  "name": "@lawnstarter/react-native-ui-datepicker",
   "version": "2.0.11",
   "description": "Customizable date picker for React Native",
   "main": "lib/commonjs/index",
