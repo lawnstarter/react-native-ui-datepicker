@@ -6,7 +6,13 @@ import { copy } from 'vite-plugin-copy';
 import { extensions } from './vite.build.helpers';
 
 export default defineConfig({
-  plugins: [react(), copy([{ src: './src/assets', dest: 'dist' }])],
+  plugins: [
+    react(),
+    copy([
+      { src: './src/assets', dest: 'dist' },
+      { src: './src/package.json', dest: 'dist' },
+    ]),
+  ],
   build: {
     outDir: 'dist',
     sourcemap: true,
