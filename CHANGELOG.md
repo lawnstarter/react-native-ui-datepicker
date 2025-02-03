@@ -3,6 +3,17 @@
 
 ### Features
 
+* **Vite:** Adjust project to build with vite ([6b9d8ae](https://github.com/lawnstarter/react-native-ui-datepicker/commit/6b9d8aed542b13dcb6c60fd8b1b84e7d66cf4152))
+* **Vite:** Adjust project to build with vite ([edf69d3](https://github.com/lawnstarter/react-native-ui-datepicker/commit/edf69d38039b24a5194c21b2bbd9e1ab5bdc6115))
+* **Vite:** Adjust project to build with vite ([08aa093](https://github.com/lawnstarter/react-native-ui-datepicker/commit/08aa09387a89bbf6c6852da1555e94fcadf02c1a))
+* **Vite:** Adjust project to build with vite ([60cf2a1](https://github.com/lawnstarter/react-native-ui-datepicker/commit/60cf2a199b768e6dbfe2156b7293e8d8d991bd0f))
+* **Vite:** Adjust project to build with vite ([23b1023](https://github.com/lawnstarter/react-native-ui-datepicker/commit/23b1023bae542bed1bb667a2b338bdee9765a103))
+
+# [1.4.0](https://github.com/lawnstarter/react-native-ui-datepicker/compare/1.3.0...1.4.0) (2025-02-03)
+
+
+### Features
+
 * **Vite:** Adjust project to build with vite ([edf69d3](https://github.com/lawnstarter/react-native-ui-datepicker/commit/edf69d38039b24a5194c21b2bbd9e1ab5bdc6115))
 * **Vite:** Adjust project to build with vite ([08aa093](https://github.com/lawnstarter/react-native-ui-datepicker/commit/08aa09387a89bbf6c6852da1555e94fcadf02c1a))
 * **Vite:** Adjust project to build with vite ([60cf2a1](https://github.com/lawnstarter/react-native-ui-datepicker/commit/60cf2a199b768e6dbfe2156b7293e8d8d991bd0f))
