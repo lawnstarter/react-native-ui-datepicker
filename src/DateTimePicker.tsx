@@ -69,8 +69,6 @@ const DateTimePicker = (
     firstDayOfWeek,
     buttonPrevIcon,
     buttonNextIcon,
-    // startYear,
-    // endYear,
     minDate,
     maxDate,
     disabledDates,
