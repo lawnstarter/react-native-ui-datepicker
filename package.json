@@ -137,12 +137,7 @@
           "message": "build(release): v${nextRelease.version} [release]"
         }
       ],
-      [
-        "@semantic-release/github",
-        {
-          "brances": ["main"]
-        }
-      ]
+      "@semantic-release/github"
     ]
   },
   "eslintConfig": {
