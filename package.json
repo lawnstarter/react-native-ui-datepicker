@@ -152,14 +152,20 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
-      "@semantic-release/npm",
+      [
+        "@semantic-release/npm",
+        {
+          "pkgRoot": "dist"
+        }
+      ],
       [
         "@semantic-release/git",
         {
           "assets": [
             "CHANGELOG.md",
             "package.json",
-            "package-lock.json"
+            "package-lock.json",
+            "dist/**/*.{js,cjs,mjs,png}"
           ],
           "message": "build(release): v${nextRelease.version} [release]"
         }
