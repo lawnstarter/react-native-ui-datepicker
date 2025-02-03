@@ -1,13 +1,25 @@
 name: Setup
 description: Setup Node.js and install dependencies
 
+inputs:
+  GH_TOKEN:
+    description: 'GH_TOKEN necessary to install dependencies'
+
 runs:
   using: composite
   steps:
+    - name: Configure Git
+      shell: sh
+      run: |
+        git config --global --add url."https://${{ inputs.GH_TOKEN }}@github.com/".insteadOf "https://github.com/"
+        git config --global --add url."https://${{ inputs.GH_TOKEN }}@github.com/".insteadOf "git://github.com/"
+
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
-        node-version: 18  # Force Node.js 18 instead of using .nvmrc
+        cache: yarn
+        node-version-file: .nvmrc
+        scope: '@lawnstarter'
 
     - name: Cache dependencies
       id: yarn-cache
