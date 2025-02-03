@@ -129,7 +129,6 @@
       [
         "@semantic-release/git",
         {
-          "branches": ["main"],
           "assets": [
             "CHANGELOG.md",
             "package.json",
@@ -138,7 +137,12 @@
           "message": "build(release): v${nextRelease.version} [release]"
         }
       ],
-      "@semantic-release/github"
+      [
+        "@semantic-release/github",
+        {
+          "brances": ["main"]
+        }
+      ]
     ]
   },
   "eslintConfig": {
