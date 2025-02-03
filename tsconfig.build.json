@@ -1,8 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "exclude": [
-    "example",
-    "lib",
+    "dist",
     "node_modules",
     "**/__tests__/*",
     "**/__mocks__/*"
