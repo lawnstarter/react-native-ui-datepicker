@@ -8,14 +8,6 @@
   "module": "./dist/react-native-ui-datepicker.js",
   "react-native": "./dist/react-native-ui-datepicker.js",
   "source": "src/index",
-  "files": [
-    "src",
-    "dist",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__",
-    "!**/.*"
-  ],
   "scripts": {
     "cm": "git cz",
     "test": "jest",
@@ -160,10 +152,21 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
-      "@semantic-release/npm",
+      [
+        "@semantic-release/npm",
+        {
+          "pkgRoot": "dist"
+        }
+      ],
       [
         "@semantic-release/git",
         {
+          "assets": [
+            "CHANGELOG.md",
+            "package.json",
+            "package-lock.json",
+            "dist/**/*.{js,cjs,mjs,png}"
+          ],
           "message": "build(release): v${nextRelease.version} [release]"
         }
       ],

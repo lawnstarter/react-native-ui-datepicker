@@ -8,7 +8,12 @@ export default defineConfig({
   plugins: [
     react(),
     viteStaticCopy({
-      targets: [{ src: './src/assets', dest: './' }],
+      targets: [
+        { src: './src/assets', dest: './' },
+        { src: './package.json', dest: './' },
+        { src: './README.md', dest: './' },
+        { src: './CHANGELOG.md', dest: './' },
+      ],
     }),
   ],
   build: {
