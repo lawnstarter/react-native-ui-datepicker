@@ -44,7 +44,7 @@ jobs:
       - name: Run unit tests
         run: yarn test
 
-  build:
+  build-release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -57,3 +57,6 @@ jobs:
 
       - name: Build package
         run: yarn prepack
+
+      - name: Create release
+        run: yarn release
