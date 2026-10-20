@@ -11,8 +11,8 @@ runs:
     - name: Configure Git
       shell: sh
       run: |
-        git config --global --add url."https://${{ inputs.GH_TOKEN }}@github.com/".insteadOf "https://github.com/"
-        git config --global --add url."https://${{ inputs.GH_TOKEN }}@github.com/".insteadOf "git://github.com/"
+        git config --global --add url."https://x-access-token:${{ inputs.GH_TOKEN }}@github.com/".insteadOf "https://github.com/"
+        git config --global --add url."https://x-access-token:${{ inputs.GH_TOKEN }}@github.com/".insteadOf "git://github.com/"
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
