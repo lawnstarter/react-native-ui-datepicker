@@ -15,7 +15,7 @@ runs:
         git config --global --add url."https://x-access-token:${{ inputs.GH_TOKEN }}@github.com/".insteadOf "git://github.com/"
 
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v5
       with:
         cache: yarn
         node-version-file: .nvmrc
@@ -27,13 +27,14 @@ runs:
 
     - name: Cache dependencies
       id: yarn-cache
-      uses: actions/cache@v3
+      uses: actions/cache@v5
       with:
         path: |
           **/node_modules
-        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        # Node version in the key: native modules built under one Node must not be restored under another
+        key: ${{ runner.os }}-node-${{ hashFiles('.nvmrc') }}-yarn-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
-          ${{ runner.os }}-yarn-
+          ${{ runner.os }}-node-${{ hashFiles('.nvmrc') }}-yarn-
 
     - name: Install dependencies
       if: steps.yarn-cache.outputs.cache-hit != 'true'
